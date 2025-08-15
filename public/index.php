@@ -1,16 +1,27 @@
 <?php
-
+// index.php (Front Controller)
 define('ROOT', __DIR__ . '/../App');
 
-// Inclui o controller
 require_once ROOT . '/core/Controller.php';
 require_once ROOT . '/controllers/HomeController.php';
 require_once ROOT . '/controllers/UserController.php';
 
+// Verifica a rota via query string
+$action = $_GET['action'] ?? 'home';
 
-
-$HomeController = new HomeController();
-$HomeController->index();
-$controller = new UserController();
-$controller->add_user();
-
+switch ($action) {
+    case 'home':
+        $controller = new HomeController();
+        $controller->index();   // chama a home
+        break;
+    case 'cadastro':
+        $controller = new HomeController();
+        $controller->cadastro(); // chama cadastro de cliente
+        break;
+    case 'add_user':
+        $controller = new UserController();
+        $controller->add_user(); // cadastro via POST
+        break;
+    default:
+        echo "Página não encontrada!";
+}

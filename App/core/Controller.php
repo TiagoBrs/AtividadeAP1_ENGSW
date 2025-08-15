@@ -2,7 +2,11 @@
 
 class Controller{   
 public function view($view, $data = []) {
-        require_once "../App/views/home/index.php";
+        // Extrai dados do array para variáveis, se quiser passar dados para a view
+        extract($data);
+
+        // Inclui a view correta
+        require_once __DIR__ . '/../views/' . $view;
     }
 
 }

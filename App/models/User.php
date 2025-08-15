@@ -1,5 +1,4 @@
 <?php
-// app/models/User.php
 
 require_once __DIR__ . '/../core/Database.php';
 
@@ -23,7 +22,7 @@ class User {
     }
 
      public function addUser(string $nome, string $cpf, Plano $plano, Status $status) {
-        // Usando Database::connect() para obter o PDO
+      
         $pdo = Database::connect();
 
         $stmt = $pdo->prepare(

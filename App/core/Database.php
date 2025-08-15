@@ -5,7 +5,7 @@ define('DB_USER', 'Database');     // Usuário do MySQL
 define('DB_NAME', 'Cadastro');         // Nome do banco de dados
 define('DB_PASS', 'database123');  // Senha do MySQL
 
-// ARQUIVO QUE FAZ A CONEXÃO NO BANCO DE DADOS MYSQL
+
 class Database {
     public static function connect() {
         try {

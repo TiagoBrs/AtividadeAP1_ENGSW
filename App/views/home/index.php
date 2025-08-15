@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuários SkyNet</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="/public/css/style.css">       
+=======
+    <link rel="stylesheet" href="/application/public/css/style.css">       
+>>>>>>> 0802967c223783ce7fe01556d0d5b4fe592bf213
 </head>
 <body>
      <header>
       <div class="logo">
+<<<<<<< HEAD
             <img src="/public/img/logo.png" alt="SkyNet Logo">
+=======
+            <img src="/application/public/img/logo.png" alt="SkyNet Logo">
+>>>>>>> 0802967c223783ce7fe01556d0d5b4fe592bf213
       </div>
    
       <div class="title">

@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 // index.php (Front Controller)
 define('ROOT', __DIR__ . '/../App');
 
@@ -25,3 +26,14 @@ switch ($action) {
     default:
         echo "Página não encontrada!";
 }
+=======
+// Caminho para a view
+$viewPath = __DIR__ . '/../App/views/home/index.php';
+
+if (file_exists($viewPath)) {
+    require $viewPath;
+} else {
+    echo "View não encontrada: $viewPath";
+}
+?>
+>>>>>>> 0802967c223783ce7fe01556d0d5b4fe592bf213

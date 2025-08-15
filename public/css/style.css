@@ -1,0 +1,98 @@
+header{
+    display: flex;
+    align-items: center;       
+    justify-content: center;    
+    padding: 10px 20px;
+    position: relative;     
+}
+
+/* Logo à esquerda, responsiva */
+div.logo {
+    margin-top: 3%;
+    position: absolute;         
+    left: 20px;
+    top: 50%;                   
+    transform: translateY(-50%);
+}
+
+div.logo img {
+     /* fundo branco para destacar logo */
+    width: 800px;   /* ajuste aqui para 300px, 400px ou 500px conforme preferir */
+    max-width: 50%; /* garante que não ultrapasse metade da tela em telas pequenas */
+    height: auto;   /* mantém proporção */
+}
+
+/* Título centralizado */
+div.title {
+    color: darkblue;
+    flex: 1;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+
+body {
+   /* background: linear-gradient(135deg, #6b5cf2da, #bf72fb);*/
+   background-color: #f5f5f5; 
+    min-height: 100vh;       
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilo do container principal */
+div.tabela-clientes {
+    display: flex;
+    flex-direction: column;      /* elementos empilhados verticalmente */
+    align-items: center;         /* centraliza elementos filhos horizontalmente */
+    justify-content: center;
+    margin: 40px auto 0 auto; /* centraliza o container */
+    padding: 50px;
+    width: 90%;
+    max-width: 1000px;           /* limita largura em telas grandes */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: #f5f5f5;
+    gap: 20px;                   /* espaço entre botão e tabela */
+    border-radius: 5px;
+    border-style: outset;
+
+}
+
+/* Estilo da tabela */
+table.tabela-clientes {
+    width: 90%;                 /* tabela ocupa toda largura do main */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table.tabela-clientes th, 
+table.tabela-clientes td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button.green { background-color: #28a745; }
+.button.blue { background-color: #007bff; }
+.button.red { background-color: #dc3545; }
+
+
+div.botão-cadastrar {
+    display: flex;
+    text-align: left;  
+    margin-top: 20px;
+}
+
+div.tabela-clientes-scroll {
+    max-height: 700px;    /* ajuste a altura máxima conforme necessário */
+    overflow-y: auto;     /* adiciona rolagem vertical se necessário */
+    width: 100%;          /* garante que o scroll ocupe toda a largura */
+}

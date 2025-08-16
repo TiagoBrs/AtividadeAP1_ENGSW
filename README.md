@@ -15,7 +15,7 @@
 | Bruno Henrique Frota Sobral    | [Bruno-uft](https://github.com/Bruno-uft)  |
 
 
-# PROJETO 1 - DESCRIÇÂO
+# PROJETO 1 - DESCRIÇÃO
 
 Para a realização desse projeto, escolheu-se a implementação de um CRUD para o gerenciamento de cadastro de usuários de uma provedora de internet
 fictícia: "SkyNet". A aplicação realizará operações que envolvem: criação de usuários, leitura dos dados dos usuários, deleção de usuários e atualização
@@ -71,7 +71,7 @@ CPF    - Apenas valore numéricos no Formato XXX.XXX.XXX-XX(Formato apenas na ex
 PLANO  - Oferecer apenas as 3 opções possíveis: Simples, Médio ou Terminator.
 STATUS - Oferecer apenas as 2 opções possíveis: Ativo ou Inativo.
 
-# ARQUTETURA E FERRAMENTAS
+# ARQUITETURA E FERRAMENTAS
 
 
 

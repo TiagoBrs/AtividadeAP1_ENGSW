@@ -41,7 +41,6 @@ Para cada registro, deverão estar disponíveis os seguintes botões de ação:
 
 * ATUALIZAR: permite modificar os atributos do usuário.
 * DELETAR: remove o usuário do banco de dados.
-* VISUALIZAR: exibe detalhadamente as informações do usuário selecionado, sem permitir edição.
 
 
 
@@ -71,6 +70,8 @@ A atualização deve ser realizada por meio de uma interface que possibilite alt
 CPF    - Apenas valore numéricos no Formato XXX.XXX.XXX-XX(Formato apenas na exibição. No banco de dados armazenar sem ponto e hífen).
 PLANO  - Oferecer apenas as 3 opções possíveis: Simples, Médio ou Terminator.
 STATUS - Oferecer apenas as 2 opções possíveis: Ativo ou Inativo.
+
+# ARQUTETURA E FERRAMENTAS
 
 
 

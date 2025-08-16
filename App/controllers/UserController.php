@@ -29,4 +29,10 @@ class UserController {
 
        
     }
+
+    public function editar($id) {
+        $usuario = User::getById($id);
+
+        require '../App/views/user/editar_usuario.php';
+    }
 }

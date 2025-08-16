@@ -19,108 +19,37 @@
 
     <div class="tabela-clientes-scroll">
         <div class="tabela-clientes">
-            <table class="tabela-clientes">
-                <thead>
-                    <tr>
-                        <th>NOME</th>
-                        <th>CPF</th>
-                        <th>PlANO</th>
-                        <th>STATUS</th>
-                        <th>AÇÃO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                     
-                    <tr>
-                        <td>Maria</td>
-                        <td>111.111.111-11</td>
-                        <td>Simples</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
+                    <table class="tabela-clientes">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Plano</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
 
-                    <tr>
-                        <td>Maria</td>
-                        <td>111.111.111-11</td>
-                        <td>Simples</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Maria</td>
-                        <td>111.111.111-11</td>
-                        <td>Simples</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>João</td>
-                        <td>111.222.333-44</td>
-                        <td>Médio</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Jose da Silva</td>
-                        <td>999.888.777-66</td>
-                        <td>Terminatos</td>
-                        <td>Inativo</td>
-                        <td>
-                            <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Maria</td>
-                        <td>111.111.111-11</td>
-                        <td>Simples</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>João</td>
-                        <td>111.222.333-44</td>
-                        <td>Médio</td>
-                        <td>Ativo</td>
-                        <td>
-                             <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Jose da Silva</td>
-                        <td>999.888.777-66</td>
-                        <td>Terminatos</td>
-                        <td>Inativo</td>
-                        <td>
-                            <a class="button gree" href="criar_usuário.html">Editar</a>
-                            <a class ="button red" href="editar_usuário.html">Excluir</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+                        <tbody>
+                            <?php if (!empty($usuarios)): ?>
+                                <?php foreach ($usuarios as $usuario): ?>
+                            <tr>
+                                <td><?= $usuario['nome'] ?></td>
+                                <td><?= $usuario['cpf'] ?></td>
+                                <td><?= $usuario['plano'] ?></td>
+                                <td><?= $usuario['status'] ?></td>
+                                <td>
+                                    <a class="button green" href="index.php?action=editar&id=<?= $usuario['id'] ?>">Editar</a>
+                                    <a class="button red" href="index.php?action=excluir&id=<?= $usuario['id'] ?>">Excluir</a>
+                                </td>
+                            </tr>
+                        
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr><td colspan="5">Nenhum usuário cadastrado.</td></tr>
+                        <?php endif; ?>
+                        </tbody>
+                    </table>
             <div class="botão-cadastrar">
                 <a class="button green" href="index.php?action=cadastro">Cadastrar Cliente</a>
             </div>

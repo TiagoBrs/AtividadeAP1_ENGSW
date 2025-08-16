@@ -23,6 +23,21 @@ switch ($action) {
         $controller = new UserController();
         $controller->add_user(); // cadastro via POST
         break;
+
+    case 'editar':
+        $action = $_GET['action'] ?? '';
+        if ($action == 'editar' && isset($_GET['id'])) {
+            (new HomeController())->editar($_GET['id']);
+        } else {
+            (new HomeController())->index();
+        }
+        break;
+
+    case 'atualizar':
+        $controller = new HomeController();
+        $controller->atualizar();
+        break;
+
     default:
         echo "Página não encontrada!";
 }

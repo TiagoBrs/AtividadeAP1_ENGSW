@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +6,8 @@
 </head>
 <body>
     <h2>Adicionar Usuário</h2>
-    <form method="POST" action="">
+   <form method="POST" action="index.php?action=add_user">
+
         <label>Nome:</label>
         <input type="text" name="nome" required><br>
 

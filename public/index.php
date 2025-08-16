@@ -18,6 +18,7 @@ switch ($action) {
         $controller = new HomeController();
         $controller->cadastro(); // chama cadastro de cliente
         break;
+
     case 'add_user':
         $controller = new UserController();
         $controller->add_user(); // cadastro via POST

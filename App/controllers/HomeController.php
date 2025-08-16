@@ -4,6 +4,6 @@ class HomeController extends Controller {
         $this->view('home/index.php'); 
     }
       public function cadastro() {
-        $this->view('home/cadastrar_cliente.html'); 
+          $this->view('home/cadastrar_cliente.php');
     }
 }

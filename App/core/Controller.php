@@ -6,7 +6,7 @@ public function view($view, $data = []) {
         extract($data);
 
         // Inclui a view correta
-        require_once __DIR__ . '/../views/' . $view;
+       require_once "../App/views/" . $view;
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../models/User.php';
 
-include ROOT . '/views/home/index.html';
+
 class UserController {
     private $model;
 
@@ -18,7 +18,12 @@ class UserController {
             $status = Status::from($_POST['status']);
 
             $this->model->addUser($nome, $cpf, $plano, $status);
-            echo "Usuário cadastrado com sucesso!";
+            
+
+
+            header("Location: index.php?action=home");
+
+            
             exit;
         }
 

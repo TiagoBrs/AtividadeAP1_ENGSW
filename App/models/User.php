@@ -57,5 +57,8 @@ class User {
         $stmt = $pdo->prepare('UPDATE Usuarios SET nome=?, cpf=?, plano=?, status=? WHERE id=?');
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }
+
+   
 }
+
 

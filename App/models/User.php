@@ -47,13 +47,13 @@ class User {
     }
 
     public static function getAll() {
-        $pdo = new PDO('mysql:host=18.228.17.85;dbname=Cadastro', 'Database', 'database123');
+        $pdo = Database::connect();
         $stmt = $pdo->query('SELECT * FROM Usuarios');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public static function update($id, $nome, $cpf, $plano, $status) {
-        $pdo = new PDO('mysql:host=18.228.17.85;dbname=Cadastro', 'Database', 'database123');
+        $pdo = Database::connect();
         $stmt = $pdo->prepare('UPDATE Usuarios SET nome=?, cpf=?, plano=?, status=? WHERE id=?');
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }

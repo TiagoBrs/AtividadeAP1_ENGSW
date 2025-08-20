@@ -18,12 +18,7 @@ class UserController {
             $status = Status::from($_POST['status']);
 
             $this->model->addUser($nome, $cpf, $plano, $status);
-            
-
-
             header("Location: index.php?action=home");
-
-            
             exit;
         }
 
@@ -35,4 +30,19 @@ class UserController {
 
         require '../App/views/user/editar_usuario.php';
     }
+
+
+    public function atualizar() {
+        require_once '../App/models/User.php';
+        $id = $_POST['id'];
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $plano = $_POST['plano'];
+        $status = $_POST['status'];
+
+        User::update($id, $nome, $cpf, $plano, $status);
+        header('Location: index.php');
+        exit;
+    }
+    
 }

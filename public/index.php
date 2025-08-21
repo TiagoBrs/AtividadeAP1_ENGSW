@@ -8,7 +8,7 @@ require_once ROOT . '/controllers/UserController.php';
 require_once ROOT . '/controllers/AdminController.php';
 
 // Verifica a rota via query string
-$action = $_GET['action'] ?? 'home';
+$action = $_GET['action'] ?? 'login_admin';
 
 switch ($action) {
     case 'home':
@@ -49,7 +49,7 @@ case 'login_admin_post':
     $adminController->login_admin();
     break;
 
-case 'logout_admin':
+case 'logout_admin': //linkar
     $adminController = new AdminController();
     $adminController->logout();
     break;

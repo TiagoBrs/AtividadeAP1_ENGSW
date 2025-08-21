@@ -51,7 +51,10 @@
                         </tbody>
                     </table>
             <div class="botão-cadastrar">
-                <a class="button green" href="index.php?action=cadastro">Cadastrar Cliente</a>
+                <a class="button blue" href="index.php?action=cadastro">Cadastrar Cliente</a>
+            </div>
+            <div class="botão-cadastrar">
+                <a class="button red" href="index.php?action=logout_admin">Encerrar Sessão</a>
             </div>
         </div>
     </div>

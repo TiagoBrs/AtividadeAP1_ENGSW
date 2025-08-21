@@ -57,5 +57,13 @@ class User {
         $stmt = $pdo->prepare('UPDATE Usuarios SET nome=?, cpf=?, plano=?, status=? WHERE id=?');
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }
+
+    public static function delete(int $id):bool{
+        $pdo = Database::connect();
+
+        $stmt = $pdo->prepare("DELETE FROM Usuarios WHERE id = :id");
+        return $stmt->execute(['id' => $id]);
+    }
+
 }
 

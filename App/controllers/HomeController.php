@@ -25,7 +25,7 @@ class HomeController extends Controller {
         $status = $_POST['status'];
 
         User::update($id, $nome, $cpf, $plano, $status);
-        header('Location: index.php');
+        header('Location: index.php?action=home');
         exit;
     }
 }

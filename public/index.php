@@ -34,7 +34,7 @@ switch ($action) {
         break;
 
     case 'atualizar':
-        $controller = new HomeController();
+        $controller = new UserController();
         $controller->atualizar();
         break;
         

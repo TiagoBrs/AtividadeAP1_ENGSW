@@ -11,10 +11,9 @@ class HomeController extends Controller {
 
     public function editar($id) {
         $usuario = User::getById($id);
-        $this->view('home/editar_usuario.php',[
-            'usuario' => $usuario
-        ]);
+        $this->view('home/editar_usuario.php',['usuario' => $usuario]);
     }
+
 
     public function atualizar() {
         require_once '../App/models/User.php';
@@ -37,4 +36,5 @@ class HomeController extends Controller {
         header('Location: index.php?action=home');
         exit;
     }
+
 }

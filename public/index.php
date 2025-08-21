@@ -37,6 +37,11 @@ switch ($action) {
         $controller = new HomeController();
         $controller->atualizar();
         break;
+        
+    case 'excluir':
+        $controller = new HomeController();
+        $controller->excluir($_GET['id']);
+        break;    
 
     default:
         echo "Página não encontrada!";

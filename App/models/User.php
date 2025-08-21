@@ -57,5 +57,12 @@ class User {
         $stmt = $pdo->prepare('UPDATE Usuarios SET nome=?, cpf=?, plano=?, status=? WHERE id=?');
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }
+
+    public static function delete($id){
+        $pdo = new PDO('mysql':host=18.228.17.85;dbname=Cadastro', 'Database', 'database123');
+        $stmt = $pdo->prepare('DELETE FROM Usuarios WHERE id = ?');
+        return $stmt->execute([$id]);
+    }
+
 }
 

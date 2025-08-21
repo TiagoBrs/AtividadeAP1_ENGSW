@@ -58,10 +58,11 @@ class User {
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }
 
-    public static function delete($id){
-        $pdo = new PDO('mysql':host=18.228.17.85;dbname=Cadastro', 'Database', 'database123');
-        $stmt = $pdo->prepare('DELETE FROM Usuarios WHERE id = ?');
-        return $stmt->execute([$id]);
+    public static function delete(int $id):bool{
+        $pdo = Database::connect();
+
+        $stmt = $pdo->prepare("DELETE FROM Usuarios WHERE id = :id");
+        return $stmt->execute(['id' => $id]);
     }
 
 }

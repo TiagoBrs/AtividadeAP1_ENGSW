@@ -7,6 +7,9 @@
     <title>Adicionar Usuário - SkyNet</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/buttons_style.css">
+    <link rel="stylesheet" href="css/form_style.css">
+
 </head>
 <body>
     <header>
@@ -21,13 +24,13 @@
     <form method="POST" action="index.php?action=add_user">
         <h2>Adicionar Usuário</h2>
         
-        <label for="nome">Nome:</label>
+        <label for="nome">NOME:</label>
         <input type="text" id="nome" name="nome" required>
 
         <label for="cpf">CPF:</label>
         <input type="text" id="cpf" name="cpf" required>
 
-        <label for="plano">Plano:</label>
+        <label for="plano">PLANO:</label>
         <select id="plano" name="plano" required>
             <option value="">Selecione um plano</option>
             <option value="Simples">Simples</option>
@@ -35,7 +38,7 @@
             <option value="Terminator">Terminator</option>
         </select>
 
-        <label for="status">Status:</label>
+        <label for="status">STATUS:</label>
         <select id="status" name="status" required>
             <option value="">Selecione um status</option>
             <option value="Ativo">Ativo</option>
@@ -43,6 +46,9 @@
         </select>
 
         <button type="submit">Adicionar Usuário</button>
+        <button type="button" class="red" onclick="window.location.href='index.php?action=home'">Cancelar</button>
+        
+    </form>
     </form>
 </body>
 </html>

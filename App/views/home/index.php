@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuários SkyNet</title>
-    <link rel="stylesheet" href="css/style.css">       
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/buttons_style.css">   
+    <link rel="stylesheet" href="css/table_style.css">
 </head>
 <body>
      <header>
@@ -13,7 +15,7 @@
       </div>
    
       <div class="title">
-            <h1>SkyNet Cadastro de Clientes</p>
+            <h1>SkyNet Cadastro de Clientes</h1>
       </div>    
     </header>
 

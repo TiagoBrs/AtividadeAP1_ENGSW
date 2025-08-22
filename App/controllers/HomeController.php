@@ -11,10 +11,9 @@ class HomeController extends Controller {
 
     public function editar($id) {
         $usuario = User::getById($id);
-        $this->view('home/editar_usuario.php',[
-            'usuario' => $usuario
-        ]);
+        $this->view('home/editar_usuario.php',['usuario' => $usuario]);
     }
+
 
     public function atualizar() {
         require_once '../App/models/User.php';
@@ -26,6 +25,16 @@ class HomeController extends Controller {
 
         User::update($id, $nome, $cpf, $plano, $status);
         header('Location: index.php');
+        exit;
+    }
+
+    public function excluir($id){
+        require_once '../App/models/User.php';
+
+        User::delete($id);
+
+        // Redireciona de volta para a lista
+        header('Location: index.php?action=home');
         exit;
     }
 

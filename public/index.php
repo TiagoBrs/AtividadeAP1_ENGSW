@@ -36,7 +36,7 @@ switch ($action) {
         break;
 
     case 'atualizar':
-        $controller = new HomeController();
+        $controller = new UserController();
         $controller->atualizar();
         break;
     case 'login_admin':
@@ -53,6 +53,13 @@ case 'logout_admin': //linkar
     $adminController = new AdminController();
     $adminController->logout();
     break;
+
+        
+    case 'excluir':
+        $controller = new HomeController();
+        $controller->excluir($_GET['id']);
+        break;    
+
 
     default:
         echo "Página não encontrada!";

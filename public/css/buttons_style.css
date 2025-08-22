@@ -1,0 +1,104 @@
+/* Botões */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button.green {
+    background: linear-gradient(135deg, #56ab2f, #34691c);
+}
+
+.button.green:hover {
+    background: linear-gradient(135deg, #4a9628, #96d4b8);
+}
+
+.button.red {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.button.red:hover {
+    background: linear-gradient(135deg, #e6395f, #e64327);
+}
+
+.button.blue {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.button.blue:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+/* Botão cadastrar */
+div.botão-cadastrar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.botão-cadastrar .button {
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+form button[type="button"].red {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+form button[type="button"].red:hover {
+    background: linear-gradient(135deg, #e6395f, #e64327);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 65, 108, 0.3);
+}
+
+
+

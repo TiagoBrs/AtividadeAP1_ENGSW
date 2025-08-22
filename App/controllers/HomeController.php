@@ -27,6 +27,7 @@ class HomeController extends Controller {
         header('Location: index.php');
         exit;
     }
+
     public function excluir($id){
         require_once '../App/models/User.php';
 
@@ -36,5 +37,6 @@ class HomeController extends Controller {
         header('Location: index.php?action=home');
         exit;
     }
+
 
 }

@@ -1,97 +1,382 @@
-header{
-    display: flex;
-    align-items: center;       
-    justify-content: center;    
-    padding: 10px 20px;
-    position: relative;     
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Logo à esquerda, responsiva */
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+}
+
 div.logo {
-    margin-top: 3%;
-    position: absolute;         
-    left: 20px;
-    top: 50%;                   
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
 }
 
 div.logo img {
-     /* fundo branco para destacar logo */
-    width: 800px;   /* ajuste aqui para 300px, 400px ou 500px conforme preferir */
-    max-width: 50%; /* garante que não ultrapasse metade da tela em telas pequenas */
-    height: auto;   /* mantém proporção */
+    width: 60px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* Título centralizado */
+div.logo img:hover {
+    transform: scale(1.05);
+}
+
 div.title {
-    color: darkblue;
     flex: 1;
     text-align: center;
-    font-size: 1.8em;
 }
 
-
-body {
-   /* background: linear-gradient(135deg, #6b5cf2da, #bf72fb);*/
-   background-color: #f5f5f5; 
-    min-height: 100vh;       
-    margin: 0;
-    font-family: 'Karla', sans-serif;
-    background-color: #f5f5f5;
+div.title h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Estilo do container principal */
+/* Container principal da tabela */
+div.tabela-clientes-scroll {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 div.tabela-clientes {
-    display: flex;
-    flex-direction: column;      /* elementos empilhados verticalmente */
-    align-items: center;         /* centraliza elementos filhos horizontalmente */
-    justify-content: center;
-    margin: 40px auto 0 auto; /* centraliza o container */
-    padding: 50px;
-    width: 90%;
-    max-width: 1000px;           /* limita largura em telas grandes */
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    background-color: #f5f5f5;
-    gap: 20px;                   /* espaço entre botão e tabela */
-    border-radius: 5px;
-    border-style: outset;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.tabela-clientes:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilo da tabela */
 table.tabela-clientes {
-    width: 90%;                 /* tabela ocupa toda largura do main */
-    border-collapse: collapse;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+table.tabela-clientes thead {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+table.tabela-clientes th {
+    padding: 18px 15px;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
     text-align: center;
 }
 
-table.tabela-clientes th, 
-table.tabela-clientes td {
-    padding: 10px;
-    border: 1px solid #ccc;
+table.tabela-clientes tbody tr {
+    background: white;
+    transition: all 0.3s ease;
 }
 
+table.tabela-clientes tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+table.tabela-clientes tbody tr:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table.tabela-clientes td {
+    padding: 18px 15px;
+    border: none;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+table.tabela-clientes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botões */
 .button {
     display: inline-block;
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.button.green { background-color: #28a745; }
-.button.blue { background-color: #007bff; }
-.button.red { background-color: #dc3545; }
 
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
 
+.button.green {
+    background: linear-gradient(135deg, #56ab2f, #34691c);
+}
+
+.button.green:hover {
+    background: linear-gradient(135deg, #4a9628, #96d4b8);
+}
+
+.button.red {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.button.red:hover {
+    background: linear-gradient(135deg, #e6395f, #e64327);
+}
+
+.button.blue {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.button.blue:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+/* Botão cadastrar */
 div.botão-cadastrar {
-    display: flex;
-    text-align: left;  
+    text-align: center;
     margin-top: 20px;
 }
 
-div.tabela-clientes-scroll {
-    max-height: 700px;    /* ajuste a altura máxima conforme necessário */
-    overflow-y: auto;     /* adiciona rolagem vertical se necessário */
-    width: 100%;          /* garante que o scroll ocupe toda a largura */
+div.botão-cadastrar .button {
+    padding: 15px 30px;
+    font-size: 1rem;
 }
+
+/* Formulários */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-2px);
+}
+
+form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+form input[type="text"],
+form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    div.logo {
+        margin-bottom: 15px;
+    }
+    
+    div.title h1 {
+        font-size: 1.5rem;
+    }
+    
+    div.tabela-clientes {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    table.tabela-clientes {
+        font-size: 0.85rem;
+    }
+    
+    table.tabela-clientes th,
+    table.tabela-clientes td {
+        padding: 12px 8px;
+    }
+    
+    .button {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+    
+    form {
+        margin: 20px 10px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    div.title h1 {
+        font-size: 1.2rem;
+    }
+    
+    table.tabela-clientes {
+        font-size: 0.8rem;
+    }
+    
+    table.tabela-clientes th,
+    table.tabela-clientes td {
+        padding: 10px 5px;
+    }
+    
+    .button {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    
+    form {
+        padding: 25px 15px;
+    }
+    
+    form input[type="text"],
+    form select {
+        padding: 12px;
+    }
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+div.tabela-clientes,
+form {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Scroll personalizado */
+div.tabela-clientes-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+

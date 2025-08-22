@@ -5,12 +5,14 @@ define('ROOT', __DIR__ . '/../App');
 require_once ROOT . '/core/Controller.php';
 require_once ROOT . '/controllers/HomeController.php';
 require_once ROOT . '/controllers/UserController.php';
+require_once ROOT . '/controllers/AdminController.php';
 
 // Verifica a rota via query string
-$action = $_GET['action'] ?? 'home';
+$action = $_GET['action'] ?? 'login_admin';
 
 switch ($action) {
     case 'home':
+
         $controller = new HomeController();
         $controller->index();   // chama a home
         break;
@@ -37,11 +39,27 @@ switch ($action) {
         $controller = new UserController();
         $controller->atualizar();
         break;
+    case 'login_admin':
+    $adminController = new AdminController();
+    $adminController->login();
+    break;
+
+case 'login_admin_post':
+    $adminController = new AdminController();
+    $adminController->login_admin();
+    break;
+
+case 'logout_admin': //linkar
+    $adminController = new AdminController();
+    $adminController->logout();
+    break;
+
         
     case 'excluir':
         $controller = new HomeController();
         $controller->excluir($_GET['id']);
         break;    
+
 
     default:
         echo "Página não encontrada!";

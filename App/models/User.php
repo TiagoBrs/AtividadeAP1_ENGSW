@@ -58,6 +58,7 @@ class User {
         $stmt->execute([$nome, $cpf, $plano, $status, $id]);
     }
 
+
     public static function delete(int $id):bool{
         $pdo = Database::connect();
 
@@ -65,5 +66,7 @@ class User {
         return $stmt->execute(['id' => $id]);
     }
 
+
 }
+
 

@@ -97,7 +97,7 @@ A aplicação segue o padrão MVC, que organiza a estrutura em três camadas pri
 
 * Interpreta os comandos, aciona os Models correspondentes e seleciona a View adequada.
 
-# FERRAMETAS
+# FERRAMENTAS
 
 Para a realização deste projeto as seguintes ferramentas foram utilizadas:
 

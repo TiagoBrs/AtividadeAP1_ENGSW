@@ -71,7 +71,42 @@ CPF    - Apenas valore numéricos no Formato XXX.XXX.XXX-XX(Formato apenas na ex
 PLANO  - Oferecer apenas as 3 opções possíveis: Simples, Médio ou Terminator.
 STATUS - Oferecer apenas as 2 opções possíveis: Ativo ou Inativo.
 
-# ARQUITETURA E FERRAMENTAS
+
+**REQUISITO 6: TELA DE LOGIN**
+
+**DESCRIÇÃO**: A aplicação deve fazer pussuir um tela de login para que apenas administradores possam acessar o gerenciamento de cadastros SkyNet.
+
+# ARQUITETURA MVC (MODEL–VIEW–CONTROLLER)
+A aplicação segue o padrão MVC, que organiza a estrutura em três camadas principais:
+
+**Model**
+
+* Responsável pela representação e manipulação dos dados.
+
+* Contém as regras de negócio e a lógica de acesso a persistência (ex.: banco de dados).
+
+**View**
+
+* Camada de apresentação, responsável por exibir as informações ao usuário.
+* 
+* Não contém regras de negócio, apenas lógica de exibição.
+
+**Controller**
+
+* Camada intermediária que recebe as requisições do usuário.
+
+* Interpreta os comandos, aciona os Models correspondentes e seleciona a View adequada.
+
+# FERRAMETAS
+
+Para a realização deste projeto as seguintes ferramentas foram utilizadas:
+
+* PHP uma linguagem interpretada usada para executar comandos do lado do servidor(comunicação com bancos de dados, gerenciamento de rotas etc).
+
+* Para o Front-End, utilizou-se HTML para estruturação do conteúdo e CSS para estilização e responsividade.
+
+* A aplicação é servida por um Banco de Dados MySQL, que realiza a persistência dos dados dos usuários cadastrados.
+
 
 
 

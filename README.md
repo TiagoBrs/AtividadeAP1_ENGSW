@@ -14,6 +14,10 @@
 | Matheus Silva Pontes           | [matheuspontes01](https://github.com/matheuspontes01)|
 | Bruno Henrique Frota Sobral    | [Bruno-uft](https://github.com/Bruno-uft)  |
 
+# VÍDEO DO PROJETO
+(Clique na miniatura do vídeo abaixo)
+[![Assista ao vídeo](https://img.youtube.com/vi/7AjvJ8cVr7A/maxresdefault.jpg)](https://www.youtube.com/watch?v=7AjvJ8cVr7A)
+
 
 # PROJETO 1 - DESCRIÇÃO
 

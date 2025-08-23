@@ -88,7 +88,7 @@ A aplicação segue o padrão MVC, que organiza a estrutura em três camadas pri
 **View**
 
 * Camada de apresentação, responsável por exibir as informações ao usuário.
-* 
+
 * Não contém regras de negócio, apenas lógica de exibição.
 
 **Controller**
@@ -134,6 +134,7 @@ Para Windows:
   onde AtividadeAP1_ENGSW é a pasta do projeto baixada do github. Com isso você pode acessar a aplicação normalmente.
 
   Login do admin: admin@gmail.com
+  
   Senha do admin: admin123
   
 

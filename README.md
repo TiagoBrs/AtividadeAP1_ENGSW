@@ -67,16 +67,7 @@ A atualização deve ser realizada por meio de uma interface que possibilite alt
 **DESCRIÇÃO**: O sistema deverá permitir a deleção de usuários, mantendo a consistência na visualização e no Banco de Dados.
 
 
-**REQUISITO 5: VALIDAÇÃO DOS DADOS**
-
-**DESCRIÇÃO**: O sistema deverá fazer a validação dos dados de entrada para exibição seguindo os seguintes padrões:
-
-CPF    - Apenas valore numéricos no Formato XXX.XXX.XXX-XX(Formato apenas na exibição. No banco de dados armazenar sem ponto e hífen).
-PLANO  - Oferecer apenas as 3 opções possíveis: Simples, Médio ou Terminator.
-STATUS - Oferecer apenas as 2 opções possíveis: Ativo ou Inativo.
-
-
-**REQUISITO 6: TELA DE LOGIN**
+**REQUISITO 5: TELA DE LOGIN**
 
 **DESCRIÇÃO**: A aplicação deve fazer pussuir um tela de login para que apenas administradores possam acessar o gerenciamento de cadastros SkyNet.
 
@@ -111,31 +102,57 @@ Para a realização deste projeto as seguintes ferramentas foram utilizadas:
 
 * A aplicação é servida por um Banco de Dados MySQL, que realiza a persistência dos dados dos usuários cadastrados.
 
+* XAMMP: um ambiente de desenvolvimento web que inclui o sevidor Apache(necessário para processamento do código em PHP) e integração com MySQL.
 
 
 
-# INSTALAÇÃO LOCAL DO PROJETO
+
+# GUIA DE INSTALAÇÃO LOCAL DO PROJETO
 
 Para Windows:
+
+* Baixar a pasta do projeto. Instale o git e clone o projeto com git clone https://github.com/TiagoBrs/AtividadeAP1_ENGSW.git.
+  Desse modo a pasta do projeto ficará no repositório corrente. Ou, se prefereir, é posssível obter a pasta do projeto sem a instalação do git,
+  baixando o arquivo zip no ícone code(cor verde).
+
+* Instalar o XAMPP: XAMPP é um acrônimo que representa quatro tecnologias: Apache, MySQL, PHP e Perl. Esse pacote de software livre oferece uma
+  solução completa para criar e gerenciar servidores web locais. Ele fornece o server e outros utilitários que permitem que o projeto funcione
+  efetivamente. A instalação pode ser feita no site oficial: https://www.apachefriends.org/pt_br/download.html. Instale a versão 8.2.12. de windows.
+
+* Criando pasta de instalação: Crie uma pasta em no disco local C do seu sistema onde a instalação do XAMPP será realizada. Neste guia
+  usaremos o nome XAMPP para se referir a essa pasta criada(pode ser qualquer outro nome).
+
+* Setup de instalação: Clique com botão direito do mouse sobre o programa e clique em executar como administrador. Ao abrir o instalador você pode prosseguir
+  com todas as opções marcadas. Na próxima tela assegure-se de que a instalação será feita na pasta que você criou. Depois aperte para prosseguir
+  até iniciar a instalação. O firewall do windows pode fazer alguma notificação, apenas clique em permitir.
+
+* Acessando serviço: Após isso, mova a pasta do projeto do github para C:\XAMPP\htdocs. No painel de controle do XAMPP dê start nos serviços MySQL e Apache.
+  Se o firewall do windows lançar algum alerta apenas clique em permitir. Depois basta acessar seu navegador com o link: http://localhost/AtividadeAP1_ENGSW/public/
+  onde AtividadeAP1_ENGSW é a pasta do projeto baixada do github. Com isso você pode acessar a aplicação normalmente.
+
+  Login do admin: admin@gmail.com
+  
+  Senha do admin: admin123
+
+  
+Para Linux:
 
 * Baixar a pasta do projeto. Instale o git e clone o projeto com git clone https://github.com/TiagoBrs/AtividadeAP1_ENGSW.git.
   Desse modo a pasta do projeto ficará no repositório corrente. Ou, se prefereir, e posssível obter a pasta do projeto sem a instalação do git,
   baixando o arquivo zip no ícone code(cor verde).
 
 * Instalar o XAMPP: XAMPP é um acrônimo que representa quatro tecnologias: Apache, MySQL, PHP e Perl. Esse pacote de software livre oferece uma
-  solução completa para criar e gerenciar servidores web locais. Ele fornece o server e outros utilitários que permitiram que o projeto funcione
-  efetivamente. A instalação pode ser feita no site oficial: https://www.apachefriends.org/pt_br/download.html. Instale a versão 8.2.12. de windows.
+  solução completa para criar e gerenciar servidores web locais. Ele fornece o server e outros utilitários que permitem que o projeto funcione
+  efetivamente. A instalação pode ser feita no site oficial: https://www.apachefriends.org/pt_br/download.html. Instale a versão 8.2.12. de linux.
 
-* Criando pasta de instalação: Crie uma pasta em no disco local C do seu sistema. A instalação do XAMPP será feita nessa pasta criada. Neste guia
-  usaremos o nome XAMPP para se referir a essa pasta.
+* Setup de instalação: Para executar o programa é necessário fornecer permissão de execução. Entre no diretório onde está o arquivo xampp-linux-x64-8.2.12-0-installer.run
+  e faça: sudo chmod a+x xampp-linux-x64-8.2.12-0-installer.run. Com isso você pode executar o intalador normalmente com sudo ./xampp-linux-x64-8.2.12-0-installer.run.
+  Feito isso basta clicar em forward até a instalação ser iniciada. Por padrão ele será instalado em /opt/lampp.
 
-* Setup de instalação: Execute o instalador como administrador com o botão direito do mouse. Ao abrir o instalador você pode prosseguir com todas as opções
-  marcadas. Na próximo tela assegure-se de que a instalação será feita na pasta que você criou. Depois aperte para prosseguir até iniciar a instalação.
-  O firewall do windows pode fazer alguma notificação, apenas clique em permitir.
-
-* Acessando serviço: Após isso, mova a pasta do projeto do github para C:\XAMPP\htdocs. No painel de controle do XAMPP dê start nos serviços MySQL e Apache.
-  Se o firewall do windows lançar algum alerta apenas clique em permitir. Depois basta acessar seu navegador com o link: http://localhost/AtividadeAP1_ENGSW/public/
-  onde AtividadeAP1_ENGSW é a pasta do projeto baixada do github. Com isso você pode acessar a aplicação normalmente.
+* Acessando serviço: Completada a instalação, mova a pasta do projeto do github para /opt/lampp/htdocs com o comando:
+  sudo mv AtividadeAP1_ENGSW /opt/lampp/htdocs (Execute o comando enstando na pasta corrente de AtividadeAP1_ENGSW). Para iniciar o XAMPP você deve
+  ir como usuário root em /opt/lampp/ e fazer o comando ./manager-linux-x64.run. Vá na aba manage servers e clique em start all. Depois basta acessar
+  seu navegador com o link: http://localhost:8000/AtividadeAP1_ENGSW/public/. Com isso você pode acessar a aplicação normalmente.
 
   Login do admin: admin@gmail.com
   

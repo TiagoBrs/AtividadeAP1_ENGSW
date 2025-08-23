@@ -1,0 +1,100 @@
+div.tabela-clientes-scroll {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+div.tabela-clientes {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div.tabela-clientes:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo da tabela */
+table.tabela-clientes {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+table.tabela-clientes thead {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+table.tabela-clientes th {
+    padding: 18px 15px;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    text-align: center;
+}
+
+table.tabela-clientes tbody tr {
+    background: white;
+    transition: all 0.3s ease;
+}
+
+table.tabela-clientes tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+table.tabela-clientes tbody tr:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+table.tabela-clientes td {
+    padding: 18px 15px;
+    border: none;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+table.tabela-clientes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+div.tabela-clientes,
+form {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Scroll personalizado */
+div.tabela-clientes-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+div.tabela-clientes-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+

@@ -157,7 +157,11 @@ Para Linux:
   Login do admin: admin@gmail.com
   
   Senha do admin: admin123
-  
+
+
+  # DEPLOY
+
+  Se não optar por instalação local você podê conferir o projeto em: http://18.228.17.85/AtividadeAP1_ENGSW/public/
 
 
 

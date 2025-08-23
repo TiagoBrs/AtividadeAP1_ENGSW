@@ -110,6 +110,34 @@ Para a realização deste projeto as seguintes ferramentas foram utilizadas:
 
 
 
+# INSTALAÇÃO LOCAL DO PROJETO
+
+Para Windows:
+
+* Baixar a pasta do projeto. Instale o git e clone o projeto com git clone https://github.com/TiagoBrs/AtividadeAP1_ENGSW.git.
+  Desse modo a pasta do projeto ficará no repositório corrente. Ou, se prefereir, e posssível obter a pasta do projeto sem a instalação do git,
+  baixando o arquivo zip no ícone code(cor verde).
+
+* Instalar o XAMPP: XAMPP é um acrônimo que representa quatro tecnologias: Apache, MySQL, PHP e Perl. Esse pacote de software livre oferece uma
+  solução completa para criar e gerenciar servidores web locais. Ele fornece o server e outros utilitários que permitiram que o projeto funcione
+  efetivamente. A instalação pode ser feita no site oficial: https://www.apachefriends.org/pt_br/download.html. Instale a versão 8.2.12. de windows.
+
+* Criando pasta de instalação: Crie uma pasta em no disco local C do seu sistema. A instalação do XAMPP será feita nessa pasta criada. Neste guia
+  usaremos o nome XAMPP para se referir a essa pasta.
+
+* Setup de instalação: Execute o instalador como administrador com o botão direito do mouse. Ao abrir o instalador você pode prosseguir com todas as opções
+  marcadas. Na próximo tela assegure-se de que a instalação será feita na pasta que você criou. Depois aperte para prosseguir até iniciar a instalação.
+  O firewall do windows pode fazer alguma notificação, apenas clique em permitir.
+
+* Acessando serviço: Após isso, mova a pasta do projeto do github para C:\XAMPP\htdocs. No painel de controle do XAMPP dê start nos serviços MySQL e Apache.
+  Se o firewall do windows lançar algum alerta apenas clique em permitir. Depois basta acessar seu navegador com o link: http://localhost/AtividadeAP1_ENGSW/public/
+  onde AtividadeAP1_ENGSW é a pasta do projeto baixada do github. Com isso você pode acessar a aplicação normalmente.
+
+  Login do admin: admin@gmail.com
+  Senha do admin: admin123
+  
+
+
 
 
 

@@ -1,14 +1,26 @@
 <?php
-// index.php (Front Controller)
 define('ROOT', __DIR__ . '/../App');
 
+// Rota
+$action = $_GET['action'] ?? 'login_admin';
+
+// Rotas protegidas
+$protected_actions = ['home', 'cadastro', 'add_user', 'editar', 'atualizar', 'excluir', 'logout_admin'];
+
+// Inclui o AdminController primeiro
+require_once ROOT . '/controllers/AdminController.php';
+
+// Se ação protegida, verifica login antes de qualquer outra coisa
+if (in_array($action, $protected_actions)) {
+    AdminController::checkLogin();
+}
+
+// Agora inclui outros controllers ,antes gerava conflito por isso deixava entrar sem login
 require_once ROOT . '/core/Controller.php';
 require_once ROOT . '/controllers/HomeController.php';
 require_once ROOT . '/controllers/UserController.php';
-require_once ROOT . '/controllers/AdminController.php';
 
-// Verifica a rota via query string
-$action = $_GET['action'] ?? 'login_admin';
+
 
 switch ($action) {
     case 'home':

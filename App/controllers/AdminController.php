@@ -12,6 +12,7 @@ class AdminController {
     }
 
     public function login_admin() {
+        session_start();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
@@ -19,8 +20,9 @@ class AdminController {
             $admin = Login::getByEmail($email);
 
             if ($admin && $senha === $admin['senha']) {
-                session_start();
-                $_SESSION['admin'] = $admin;
+             
+                 $_SESSION['admin_logged_in'] = true; 
+            $_SESSION['admin'] = $admin;
 
                 // Vai direto pra home
                 header("Location: index.php?action=home");
@@ -38,4 +40,16 @@ class AdminController {
         header("Location: index.php?action=login_admin");
         exit;
     }
+
+
+    //FUNCAO NOVA PRA VERIFICAR LOGIN
+    public static function checkLogin() {
+    session_start();
+      if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+        header('Location: index.php?action=login_admin');
+        exit;
+    }
+}
+
+    
 }

@@ -38,4 +38,16 @@ class AdminController {
         header("Location: index.php?action=login_admin");
         exit;
     }
+
+
+    //FUNCAO NOVA PRA VERIFICAR LOGIN
+    public static function checkLogin() {
+    session_start();
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+        header('Location: index.php?action=login_admin');
+        exit;
+    }
+}
+
+    
 }

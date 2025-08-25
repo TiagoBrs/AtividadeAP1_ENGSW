@@ -16,7 +16,7 @@
 
 # VÍDEO DO PROJETO
 (Clique na miniatura do vídeo abaixo)
-[![Assista ao vídeo](https://img.youtube.com/vi/Yqo7gxC-NYo/maxresdefault.jpg)](https://www.youtube.com/watch?v=Yqo7gxC-NYo)
+[![Assista ao vídeo](https://img.youtube.com/vi/CXWk26p7s_Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=CXWk26p7s_Q)
 
 
 # PROJETO 1 - DESCRIÇÃO
